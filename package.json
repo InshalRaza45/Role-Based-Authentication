@@ -1,0 +1,29 @@
+{
+  "name": "role-based-authentication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InshalRaza45/Role-Based-Authentication.git"
+  },
+  "author": "inshal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InshalRaza45/Role-Based-Authentication/issues"
+  },
+  "homepage": "https://github.com/InshalRaza45/Role-Based-Authentication#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
