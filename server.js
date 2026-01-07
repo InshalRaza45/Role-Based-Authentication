@@ -43,9 +43,21 @@ app.post('/Login',async(req,res)=>{
         return res.send("Kindly fill all the fields")
     }
 
-    var userAvail = await DataSchema.find();
+    var userAvail = await DataSchema.findOne({useremail});
 
-    return res.send(userAvail)
+    if(!userAvail){
+        return res.send("User not found, Kindly register first");
+    }
+
+    //var DBPass = userAvail.userpass;
+
+    var ValidOrNot = await bcrypt.compare(userpass, userAvail.userpass);
+
+    if(!ValidOrNot){
+        return res.send("something went wrong");
+    }
+
+    return res.send("Login Successful");
 
 })
 
